@@ -12,15 +12,16 @@ namespace ProjectCrawler
 {
     public partial class HomeworkTiebaCrawler : System.Web.UI.Page
     {
-        private readonly string SESSION_NAME = "ListResultHrefs";
+        private readonly string SESSION_NAME = "ListResultHrefs"; //缓存的key
         protected void Page_Load(object sender, EventArgs e)
         {
             List<ExampleMyHref> resultHrefs;
             if (!IsPostBack)
             {
-                Session.RemoveAll();
-                resultHrefs = HrefCrawler(10);
+                Session.RemoveAll(); //清空已有缓存以免冲突
+                resultHrefs = HrefCrawler(15); //爬取前15页
 
+                //分词并保存, 词频大于20的写入json
                 var segmenter = new JiebaSegmenter();
                 string allTItles = "";
                 foreach (ExampleMyHref href in resultHrefs)
@@ -48,10 +49,8 @@ namespace ProjectCrawler
                         {
                             int f = GetFrequency(allWords, item); //统计词频
                             wordsInts.Add(item.Trim(), f);
-                            if (f >= 11)
+                            if (f >= 20)
                             {
-                                //第一个前不用加逗号，目的是构造一个 A,B,C,D,.....，注意除了 A 之外，每一个
-                                //字母前都有逗号
                                 if (i == 0)
                                     jsonstr += "{\"name\":\"" + item.Trim() + "\",\"value\":" + f + "}";
                                 else
@@ -64,7 +63,7 @@ namespace ProjectCrawler
                 jsonstr += "]";
                 WriteData("tieba.json", jsonstr);
 
-                Session[SESSION_NAME] = resultHrefs;
+                Session[SESSION_NAME] = resultHrefs;  //使用Session缓存查询到的数据
             }
         }
 
@@ -72,8 +71,7 @@ namespace ProjectCrawler
         {
             var hrefList = new List<ExampleMyHref>();
             var urlList = new List<string>();
-            string urlTemplate =
-                "https://tieba.baidu.com/f?kw=%E4%B8%9C%E6%96%B9&ie=utf-8&pn={0}";
+            string urlTemplate = "http://tieba.baidu.com/f?kw=linux&ie=utf-8&pn={0}";
             for (var i = 0; i < maxPages; i++)
             {
                 urlList.Add(string.Format(urlTemplate, (i + 1) * 50));
@@ -120,6 +118,7 @@ namespace ProjectCrawler
             string aimfilepath = MapPath(filePath);//将虚拟路径转为实际路径
             if (File.Exists(aimfilepath))
             {
+                // 如果文件已经存在则删掉重写
                 File.Delete(aimfilepath);
             }
             using (FileStream fs = new FileStream(aimfilepath, FileMode.OpenOrCreate))
@@ -138,10 +137,10 @@ namespace ProjectCrawler
         {
             string strSearch = TxtKeyword.Text;
             var segmenter = new JiebaSegmenter();
-            var searchKeywords = segmenter.CutForSearch(strSearch);
+            var searchKeywords = segmenter.CutForSearch(strSearch); //为了尽可能匹配到将搜索内容也分解为关键字
             var searchResults = new List<ExampleMyHref>();
-            var resultHrefs = (List<ExampleMyHref>)Session[SESSION_NAME];
-            var hrefUrls = new List<string>();
+            var resultHrefs = (List<ExampleMyHref>)Session[SESSION_NAME]; //读取缓存
+            var hrefUrls = new List<string>(); // 用于去重
 
             foreach (var href in resultHrefs)
             {
@@ -163,7 +162,9 @@ namespace ProjectCrawler
             {
                 foreach (var item in searchResults)
                 {
-                    Response.Write(item.HrefTitle + "|" + item.HrefSrc + "<br />");
+                    string resulttag = "<a href=\"" + item.HrefSrc + "\">" + item.HrefTitle + "</a><br />";
+                    Response.Write(resulttag);
+                    //Response.Write(item.HrefTitle + "|" + item.HrefSrc + "<br />");
                 }
             }
             else

@@ -43,9 +43,9 @@
                         type: 'wordCloud',
                         gridSize: 2,
                         sizeRange: [12, 50],
-                        rotationRange: [0, 0],
+                        rotationRange: [-60, 60],
                         shape: 'circle',
-                        width: 600,
+                        width: 800,
                         height: 600,
                         drawOutOfBound: true,
                         textStyle: {
