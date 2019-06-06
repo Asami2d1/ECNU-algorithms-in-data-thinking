@@ -1,0 +1,12 @@
+D:\Github\DataAlgo\DataAlgo\bin\DataAlgo.dll.config
+D:\Github\DataAlgo\DataAlgo\bin\DataAlgo.dll
+D:\Github\DataAlgo\DataAlgo\bin\DataAlgo.pdb
+D:\Github\DataAlgo\DataAlgo\obj\Debug\DataAlgo.csprojAssemblyReference.cache
+D:\Github\DataAlgo\DataAlgo\obj\Debug\DataAlgo.csproj.CoreCompileInputs.cache
+D:\Github\DataAlgo\DataAlgo\obj\Debug\DataAlgo.dll
+D:\Github\DataAlgo\DataAlgo\obj\Debug\DataAlgo.pdb
+D:\DataAlgo-master\DataAlgo\bin\DataAlgo.dll
+D:\DataAlgo-master\DataAlgo\bin\DataAlgo.pdb
+D:\DataAlgo-master\DataAlgo\obj\Debug\DataAlgo.csprojResolveAssemblyReference.cache
+D:\DataAlgo-master\DataAlgo\obj\Debug\DataAlgo.dll
+D:\DataAlgo-master\DataAlgo\obj\Debug\DataAlgo.pdb

@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4649D23-9D23-4C18-8D2D-ED28A7B75B07}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectAlgorithm</RootNamespace>
+    <AssemblyName>ProjectAlgorithm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.AITools.Tvbboy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Common.AITools.Tvbboy.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.SQLite, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.110.0\lib\net45\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.110.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.110.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common.AITools.Tvbboy.dll" />
+    <Content Include="ExampleDatabase.aspx" />
+    <Content Include="ExampleDatabaseInsertOne.aspx" />
+    <Content Include="ExampleDatabaseReadOne.aspx" />
+    <Content Include="ExampleDijkstra.aspx" />
+    <Content Include="ExampleRecursionDB.aspx" />
+    <Content Include="ExBasicStatistics.aspx" />
+    <Content Include="ExCalcE.aspx" />
+    <Content Include="ExCalcPi.aspx" />
+    <Content Include="ExerciseDatabaseReadList.aspx" />
+    <Content Include="ExFib.aspx" />
+    <Content Include="ExFunction.aspx" />
+    <Content Include="ExLinearRegression.aspx" />
+    <Content Include="ExMultiLinearRegression.aspx" />
+    <Content Include="ExRandom.aspx" />
+    <Content Include="HomeWorkAltname.aspx" />
+    <Content Include="HomeworkComputeRho.aspx" />
+    <Content Include="HomeworkDijkstra.aspx" />
+    <Content Include="HomeworkIsArmstrongNumber.aspx" />
+    <Content Include="homeworkKmeansGeneral.aspx" />
+    <Content Include="HomeworkMonteCarloFootball.aspx" />
+    <Content Include="HomeworkRankEstimation.aspx" />
+    <Content Include="HomeworkRecursionOffspring.aspx" />
+    <Content Include="HomeworkRegression.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExampleDatabase.aspx.cs">
+      <DependentUpon>ExampleDatabase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExampleDatabase.aspx.designer.cs">
+      <DependentUpon>ExampleDatabase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExampleDatabaseInsertOne.aspx.cs">
+      <DependentUpon>ExampleDatabaseInsertOne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExampleDatabaseInsertOne.aspx.designer.cs">
+      <DependentUpon>ExampleDatabaseInsertOne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExampleDatabaseReadOne.aspx.cs">
+      <DependentUpon>ExampleDatabaseReadOne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExampleDatabaseReadOne.aspx.designer.cs">
+      <DependentUpon>ExampleDatabaseReadOne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExampleDijkstra.aspx.cs">
+      <DependentUpon>ExampleDijkstra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExampleDijkstra.aspx.designer.cs">
+      <DependentUpon>ExampleDijkstra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExampleRecursionDB.aspx.cs">
+      <DependentUpon>ExampleRecursionDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExampleRecursionDB.aspx.designer.cs">
+      <DependentUpon>ExampleRecursionDB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExBasicStatistics.aspx.cs">
+      <DependentUpon>ExBasicStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExBasicStatistics.aspx.designer.cs">
+      <DependentUpon>ExBasicStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExCalcE.aspx.cs">
+      <DependentUpon>ExCalcE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExCalcE.aspx.designer.cs">
+      <DependentUpon>ExCalcE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExCalcPi.aspx.cs">
+      <DependentUpon>ExCalcPi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExCalcPi.aspx.designer.cs">
+      <DependentUpon>ExCalcPi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExerciseDatabaseReadList.aspx.cs">
+      <DependentUpon>ExerciseDatabaseReadList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExerciseDatabaseReadList.aspx.designer.cs">
+      <DependentUpon>ExerciseDatabaseReadList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExFib.aspx.cs">
+      <DependentUpon>ExFib.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExFib.aspx.designer.cs">
+      <DependentUpon>ExFib.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExFunction.aspx.cs">
+      <DependentUpon>ExFunction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExFunction.aspx.designer.cs">
+      <DependentUpon>ExFunction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExLinearRegression.aspx.cs">
+      <DependentUpon>ExLinearRegression.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExLinearRegression.aspx.designer.cs">
+      <DependentUpon>ExLinearRegression.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExMultiLinearRegression.aspx.cs">
+      <DependentUpon>ExMultiLinearRegression.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExMultiLinearRegression.aspx.designer.cs">
+      <DependentUpon>ExMultiLinearRegression.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExRandom.aspx.cs">
+      <DependentUpon>ExRandom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExRandom.aspx.designer.cs">
+      <DependentUpon>ExRandom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeWorkAltname.aspx.cs">
+      <DependentUpon>HomeWorkAltname.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeWorkAltname.aspx.designer.cs">
+      <DependentUpon>HomeWorkAltname.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeworkComputeRho.aspx.cs">
+      <DependentUpon>HomeworkComputeRho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeworkComputeRho.aspx.designer.cs">
+      <DependentUpon>HomeworkComputeRho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeworkDijkstra.aspx.cs">
+      <DependentUpon>HomeworkDijkstra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeworkDijkstra.aspx.designer.cs">
+      <DependentUpon>HomeworkDijkstra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeworkIsArmstrongNumber.aspx.cs">
+      <DependentUpon>HomeworkIsArmstrongNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeworkIsArmstrongNumber.aspx.designer.cs">
+      <DependentUpon>HomeworkIsArmstrongNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homeworkKmeansGeneral.aspx.cs">
+      <DependentUpon>homeworkKmeansGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homeworkKmeansGeneral.aspx.designer.cs">
+      <DependentUpon>homeworkKmeansGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeworkMonteCarloFootball.aspx.cs">
+      <DependentUpon>HomeworkMonteCarloFootball.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeworkMonteCarloFootball.aspx.designer.cs">
+      <DependentUpon>HomeworkMonteCarloFootball.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeworkRankEstimation.aspx.cs">
+      <DependentUpon>HomeworkRankEstimation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeworkRankEstimation.aspx.designer.cs">
+      <DependentUpon>HomeworkRankEstimation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeworkRecursionOffspring.aspx.cs">
+      <DependentUpon>HomeworkRecursionOffspring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeworkRecursionOffspring.aspx.designer.cs">
+      <DependentUpon>HomeworkRecursionOffspring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeworkRegression.aspx.cs">
+      <DependentUpon>HomeworkRegression.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeworkRegression.aspx.designer.cs">
+      <DependentUpon>HomeworkRegression.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include=".SQLiteHelper.cs" />
+    <Compile Include="SQLiteHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dataset.csv" />
+    <None Include="packages.config" />
+    <Content Include="test1.csv" />
+    <Content Include="test2.csv" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56168/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.110.0\build\net45\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
