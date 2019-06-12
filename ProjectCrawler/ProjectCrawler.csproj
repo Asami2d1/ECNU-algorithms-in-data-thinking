@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExampleCrawLink.aspx" />
+    <Content Include="ExampleDownloadPictures.aspx" />
     <Content Include="HomeworkTiebaCrawler.aspx" />
     <Content Include="js\echarts-wordcloud.js" />
     <Content Include="js\echarts-wordcloud.min.js" />
@@ -99,6 +100,13 @@
     </Compile>
     <Compile Include="ExampleCrawLink.aspx.designer.cs">
       <DependentUpon>ExampleCrawLink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExampleDownloadPictures.aspx.cs">
+      <DependentUpon>ExampleDownloadPictures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExampleDownloadPictures.aspx.designer.cs">
+      <DependentUpon>ExampleDownloadPictures.aspx</DependentUpon>
     </Compile>
     <Compile Include="ExampleMyHref.cs" />
     <Compile Include="HomeworkTiebaCrawler.aspx.cs">
